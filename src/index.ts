@@ -1,6 +1,8 @@
 import { Elysia } from "elysia";
 import { authRoutes } from './routes/authRoute';
 import { swagger } from '@elysiajs/swagger';
+import { chatRoutes } from "./routes/chatRoute";
+
 
 
 const app = new Elysia()
@@ -17,6 +19,7 @@ const app = new Elysia()
     })
   )
   .use(authRoutes)
+  .use(chatRoutes)
   .listen(3000);
 
 
